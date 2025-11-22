@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brisanje Naloga - Moj Otkup</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #FF6F00;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+        
+        h2 {
+            color: #333;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            border-bottom: 2px solid #FF6F00;
+            padding-bottom: 5px;
+        }
+        
+        h3 {
+            color: #555;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        ol, ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .warning-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .warning-box strong {
+            color: #856404;
+        }
+        
+        .info-box {
+            background-color: #d1ecf1;
+            border-left: 4px solid #0c5460;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .info-box strong {
+            color: #0c5460;
+        }
+        
+        .contact-info {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        
+        .contact-info strong {
+            color: #FF6F00;
+        }
+        
+        a {
+            color: #FF6F00;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .step-number {
+            display: inline-block;
+            background-color: #FF6F00;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.5em;
+            }
+            
+            h2 {
+                font-size: 1.3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Brisanje Naloga i Podataka</h1>
+        <p class="last-updated"><strong>Poslednje ažuriranje:</strong> 22. novembar 2025</p>
+        
+        <div class="warning-box">
+            <p><strong>⚠️ VAŽNO:</strong> Brisanje naloga je trajna akcija koja se ne može poništiti. Nakon brisanja, svi vaši podaci će biti trajno obrisani i nećete moći da ih povratite.</p>
+        </div>
+        
+        <h2>Kako zatražiti brisanje naloga</h2>
+        <p>Da biste obrisali svoj nalog i sve podatke povezane sa vašim nalogom u aplikaciji <strong>Moj Otkup</strong>, molimo vas da pratite sledeće korake:</p>
+        
+        <h3>Korak 1: Prijavite se u aplikaciju</h3>
+        <p>Otvorite aplikaciju Moj Otkup na vašem uređaju i prijavite se sa vašim email adresom i lozinkom.</p>
+        
+        <h3>Korak 2: Kontaktirajte nas</h3>
+        <p>Pošaljite email na adresu <strong>dev.marko.vasiljkovic@gmail.com</strong> sa sledećim informacijama:</p>
+        <ul>
+            <li><strong>Predmet:</strong> Zahtev za brisanje naloga</li>
+            <li><strong>Email adresa</strong> koju koristite za prijavu u aplikaciju</li>
+            <li><strong>Potvrda</strong> da želite da obrišete svoj nalog i sve podatke</li>
+        </ul>
+        
+        <h3>Korak 3: Verifikacija identiteta</h3>
+        <p>Radi bezbednosti, možemo zatražiti dodatnu verifikaciju vašeg identiteta pre brisanja naloga. Ovo je neophodno da bismo osigurali da je zahtev stvarno poslat od strane vlasnika naloga.</p>
+        
+        <h3>Korak 4: Proces brisanja</h3>
+        <p>Nakon što verifikujemo vaš identitet, obrisaćemo:</p>
+        <ul>
+            <li>Vaš korisnički nalog iz Firebase Authentication sistema</li>
+            <li>Sve podatke o otkupu povezane sa vašim nalogom iz Firestore baze podataka</li>
+            <li>Sve podatke iz Firebase Realtime Database povezane sa vašim nalogom</li>
+            <li>Sve fajlove iz Firebase Storage povezane sa vašim nalogom</li>
+        </ul>
+        
+        <div class="info-box">
+            <p><strong>ℹ️ Napomena:</strong> Proces brisanja obično traje do 30 dana od trenutka kada zatražite brisanje. Tokom ovog perioda, vaš nalog će biti deaktivisan, ali podaci će biti potpuno obrisani nakon završetka procesa.</p>
+        </div>
+        
+        <h2>Šta se briše</h2>
+        <p>Kada obrišete svoj nalog, sledeći podaci će biti trajno obrisani:</p>
+        <ul>
+            <li><strong>Email adresa</strong> - korisnički nalog za autentifikaciju</li>
+            <li><strong>Ime i prezime</strong> - ako ste ih uneli tokom registracije</li>
+            <li><strong>Podaci o otkupu</strong> - svi podaci koje ste uneli u aplikaciju</li>
+            <li><strong>Istorija aktivnosti</strong> - sve aktivnosti povezane sa vašim nalogom</li>
+        </ul>
+        
+        <h2>Šta se zadržava</h2>
+        <p>Neki podaci mogu biti zadržani u skladu sa zakonskim obavezama:</p>
+        <ul>
+            <li><strong>Finansijski zapisi</strong> - ako postoje, mogu biti zadržani u skladu sa zakonskim obavezama (npr. računovodstveni zapisi)</li>
+            <li><strong>Anonimizovani podaci</strong> - podaci koji su već anonimizovani i ne mogu biti povezani sa vašim identitetom</li>
+        </ul>
+        
+        <h2>Alternativne opcije</h2>
+        <p>Pre nego što zatražite brisanje naloga, razmotrite sledeće opcije:</p>
+        <ul>
+            <li><strong>Deaktivacija naloga</strong> - možete zatražiti privremenu deaktivaciju naloga umesto trajnog brisanja</li>
+            <li><strong>Brisanje određenih podataka</strong> - možete zatražiti brisanje samo određenih podataka, a ne celog naloga</li>
+        </ul>
+        <p>Za ove opcije, kontaktirajte nas na istu email adresu.</p>
+        
+        <h2>Kontakt</h2>
+        <div class="contact-info">
+            <p>Ako imate pitanja o procesu brisanja naloga ili želite da zatražite brisanje, kontaktirajte nas:</p>
+            <p><strong>Email:</strong> <a href="mailto:dev.marko.vasiljkovic@gmail.com">dev.marko.vasiljkovic@gmail.com</a></p>
+            <p><strong>Vreme odgovora:</strong> Pokušavamo da odgovorimo na sve zahteve u roku od 48 sati.</p>
+        </div>
+        
+        <hr style="margin: 30px 0; border: none; border-top: 1px solid #ddd;">
+        
+        <p style="text-align: center; margin-top: 20px;">
+            <a href="index.html">← Nazad na Politiku Privatnosti</a>
+        </p>
+        
+        <p style="color: #666; font-size: 0.9em; margin-top: 20px;"><strong>Napomena:</strong> Ova stranica je deo Politike Privatnosti aplikacije Moj Otkup. Za dodatne informacije, molimo vas da pročitate našu <a href="index.html">Politiku Privatnosti</a>.</p>
+    </div>
+</body>
+</html>
+
